@@ -1,9 +1,9 @@
-import PageList from './components/PageList';
+import ArtistPage from './components/ArtistPage';
 import './App.css';
 const App = () => {
   return (
     <div>
-      <PageList />
+      <ArtistPage />
     </div>
   );
 }

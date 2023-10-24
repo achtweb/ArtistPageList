@@ -1,38 +1,36 @@
-.App {
-  text-align: center;
+.pagelist {
+  margin-left: 1em;
+  font-size: 18px;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.pagelist ul li {
+  padding-bottom: 10px;
+  list-style-type: none;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.pagelist ul li a {
+  padding-left: 12px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.pagelist ul li .eraser{
+  display: inline-block;
+  position: relative;
+  width: 1.6em;
+  height: 0.5em;
+  cursor: pointer;
 }
-
-.App-link {
-  color: #61dafb;
+.pagelist ul li .eraser::before,
+.pagelist ul li .eraser::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 4px;
+  height: 20px;
+  background: #e33;
+  border-radius: 2px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.pagelist ul li .eraser::before {
+  transform: translate(-50%,-50%) rotate(45deg);
+}
+ 
+.pagelist ul li .eraser::after {
+  transform: translate(-50%,-50%) rotate(-45deg);
 }
